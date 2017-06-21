@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 
@@ -32,10 +32,10 @@ $this->title = 'My Yii Application';
                     <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title">МЕНЮ<span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                     <input type="checkbox" id="ResponsiveMenu-submenu">
                     <ul class="ResponsiveMenu" id="ResponsiveMenu">
-                        <li><a href="#pop_tavary">&#1050;&#1040;&#1058;&#1040;&#1051;&#1054;&#1043;</a></li>
-                        <li><a href="#">&#1044;&#1054;&#1057;&#1058;&#1040;&#1042;&#1050;&#1040;</a></li>
-                        <li><a href="#">&#1043;&#1040;&#1056;&#1040;&#1053;&#1058;&#1048;&#1048;</a></li>
-                        <li><a href="#">&#1050;&#1054;&#1053;&#1058;&#1040;&#1050;&#1058;&#1067;</a></li>
+                        <li><?= Html::a('КАТАЛОГ', '#pop_tavary' ) ?></li>
+                        <li><?= Html::a('ДОСТАВКА', 'delivery' ) ?></li>
+                        <li><?= Html::a('ГАРАНТИИ', 'guarantees' ) ?></li>
+                        <li><?= Html::a('КОНТАКТЫ', 'contact' ) ?></li>
                     </ul>
                 </div>
             </div>

@@ -20,7 +20,7 @@ class InternalAsset extends AssetBundle
     public $css = [
         'css/site2.css',
         'css/vn.css',
-        'css/style.css',
+        'css/style2.css',
     ];
     public $js = [
         'js/jquery-1.12.4.min.js',

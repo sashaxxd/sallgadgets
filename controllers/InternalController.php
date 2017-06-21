@@ -21,5 +21,25 @@ class InternalController extends Controller
         );
 
     }
+    public  function actionDelivery()
+    {
+        return $this->render('delivery'
 
+        );
+
+    }
+    public  function actionGuarantees()
+    {
+        return $this->render('guarantees'
+
+        );
+
+    }
+    public  function actionContact()
+    {
+        return $this->render('contact'
+
+        );
+
+    }
 }

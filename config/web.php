@@ -7,12 +7,14 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'defaultRoute' => 'index/index',
     'language' => 'ru-Ru',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '2hw4_82RsgeHZLr5GTAGq9Og1mno1AkY',
             'baseUrl' => '',
+
             'enableCsrfValidation' => false,
             'enableCookieValidation' => false
         ],
@@ -51,8 +53,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'tovar/<id:\d+>' => 'index/view',//Указываем урл для контроллера тест
+                '/' => 'index/index',//Указываем урл для первой страницы контроллера тест
                 '<action>' => 'internal/<action>',
-                '<action>' => 'site/<action>',
 
             ],
         ],

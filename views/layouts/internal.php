@@ -79,10 +79,10 @@ InternalAsset::register($this);
                     <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title">МЕНЮ<span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                     <input type="checkbox" id="ResponsiveMenu-submenu">
                     <ul class="ResponsiveMenu" id="ResponsiveMenu">
-                        <li><a href="#pop_tavary">&#1050;&#1040;&#1058;&#1040;&#1051;&#1054;&#1043;</a></li>
-                        <li><a href="#">&#1044;&#1054;&#1057;&#1058;&#1040;&#1042;&#1050;&#1040;</a></li>
-                        <li><a href="#">&#1043;&#1040;&#1056;&#1040;&#1053;&#1058;&#1048;&#1048;</a></li>
-                        <li><a href="#">&#1050;&#1054;&#1053;&#1058;&#1040;&#1050;&#1058;&#1067;</a></li>
+                        <li><?= Html::a('КАТАЛОГ', '/' ) ?></li>
+                        <li><?= Html::a('ДОСТАВКА', 'delivery' ) ?></li>
+                        <li><?= Html::a('ГАРАНТИИ', 'guarantees' ) ?></li>
+                        <li><?= Html::a('КОНТАКТЫ', 'contact' ) ?></li>
                     </ul>
                 </div>
             </div>
@@ -138,8 +138,8 @@ InternalAsset::register($this);
                 <div id="allgadgets_Form2">
                     <form name="Form2" method="post" action="send" accept-charset="UTF-8" id="Form2">
                         <input type="submit" id="send" name="" value="ОТПРАВИТЬ">
-                        <input type="text" id="Editbox7" name="Editbox1" value="" placeholder="&#1042;&#1072;&#1096;&#1077; &#1080;&#1084;&#1103;" required="">
-                        <input type="text" id="Editbox8" name="Editbox1" value="" placeholder="&#1042;&#1072;&#1096; &#1090;&#1077;&#1083;&#1077;&#1092;&#1086;&#1085;" required="">
+                        <input type="text" id="Editbox7" name="name" value="" placeholder="Ваше имя" required="">
+                        <input type="text" id="Editbox8" name="phone" value="" placeholder="Ваш телефон" required="">
                     </form>
                 </div>
                 <div id="allgadgets_Text30">
