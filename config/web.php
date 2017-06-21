@@ -13,6 +13,11 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '2hw4_82RsgeHZLr5GTAGq9Og1mno1AkY',
             'baseUrl' => '',
+            'enableCsrfValidation' => false,
+            'enableCookieValidation' => false
+        ],
+        'message' => [
+            'class' => 'app\components\MessageComponent',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -46,6 +51,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<action>' => 'internal/<action>',
+                '<action>' => 'site/<action>',
+
             ],
         ],
 
