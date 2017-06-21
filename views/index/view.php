@@ -1,1 +1,1 @@
-<?= $model->link; ?>
+<?= $model->title; ?>

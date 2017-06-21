@@ -126,8 +126,8 @@ $this->title = 'КАТАЛОГ allgadgets';
                 <div id="allgadgets_LayoutGrid12">
                     <div id="LayoutGrid12">
                         <div class="row">
-                            <?php  if(!empty($model)): ?>
-                                <?  foreach ($model as $item):?>
+                            <?php  if(!empty($model2)): ?>
+                                <?  foreach ($model2 as $item):?>
                                     <div class="col-1">
                                         <div id="allgadgets_title1">
                                     <span id="allgadgets_uid5">
@@ -139,7 +139,7 @@ $this->title = 'КАТАЛОГ allgadgets';
                                         </div>
                                         <hr id="Line1">
                                         <div id="allgadgets_button_podrob">
-                                            <a href="<?= $item->link; ?>" id="allgadgets_uid6" target="_blank"><img src="images/img0003.png" id="button_podrob" alt=""></a>
+                                            <a href="<?= yii\helpers\Url::to(['index/view', 'id' => $item->id]) ?>" id="allgadgets_uid6" ><img src="images/img0003.png" id="button_podrob" alt=""></a>
                                         </div>
                                     </div>
                                 <?php endforeach;?>
