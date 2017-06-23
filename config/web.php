@@ -8,6 +8,12 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'index/index',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
+        ],
+    ],
     'language' => 'ru-Ru',
     'components' => [
         'request' => [
@@ -53,9 +59,15 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'send' => 'index/send',
+                'login' => 'site/login',
+                'politic' => 'internal/politic',
+                'delivery' => 'internal/delivery',
+                'guarantees' => 'internal/guarantees',
+                'contact' => 'internal/contact',
                 'tovar/<id:\d+>' => 'index/view',//Указываем урл для контроллера тест
                 '/' => 'index/index',//Указываем урл для первой страницы контроллера тест
-                '<action>' => 'internal/<action>',
+
 
             ],
         ],
