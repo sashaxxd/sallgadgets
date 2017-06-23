@@ -6,10 +6,10 @@
 
 
 use yii\helpers\Html;
-use app\assets\InternalAsset;
+use app\assets\AdminAsset;
 
 
-InternalAsset::register($this);
+AdminAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
@@ -44,7 +44,7 @@ InternalAsset::register($this);
         <div class="row">
             <div class="col-1">
                 <div id="allgadgets_logo">
-                    <a href="http://all-gadgets25.ru"><img src="../images/logo2.png" id="logo" alt=""></a>
+                    <a href="http://all-gadgets25.ru"><img src="/images/logo2.png" id="logo" alt=""></a>
                 </div>
             </div>
             <div class="col-2">
@@ -56,9 +56,9 @@ InternalAsset::register($this);
                 <div id="allgadgets_button_zz">
                     <a href="<?= \yii\helpers\Url::to(['/site/logout'])?>"><div id="button_zz"><div id="button_zz_text"><span id="allgadgets_uid2"><?= Yii::$app->user->identity['username']?> (Выход)</span></div></div></a>
                 </div>
-<!--                <div id="allgadgets_neobaz_text">-->
-<!--                    <span id="allgadgets_uid3">(ни к чему не обязывает)</span>-->
-<!--                </div>-->
+                <div id="allgadgets_neobaz_text">
+                    <span id="allgadgets_uid3">(выход с админ панели)</span>
+                </div>
             </div>
         </div>
     </div>
@@ -79,10 +79,9 @@ InternalAsset::register($this);
                     <label class="toggle" for="ResponsiveMenu-submenu" id="ResponsiveMenu-title">МЕНЮ<span id="ResponsiveMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
                     <input type="checkbox" id="ResponsiveMenu-submenu">
                     <ul class="ResponsiveMenu" id="ResponsiveMenu">
-                        <li><?= Html::a('КАТАЛОГ', '/' ) ?></li>
-                        <li><?= Html::a('ДОСТАВКА', '../delivery' ) ?></li>
-                        <li><?= Html::a('ГАРАНТИИ', '../guarantees' ) ?></li>
-                        <li><?= Html::a('КОНТАКТЫ', '../contact' ) ?></li>
+                        <li><?= Html::a('АДМИНКА', '/admin' ) ?></li>
+                        <li><?= Html::a('ПОПУЛЯРНЫЕ ТОВАРЫ', '/admin/popular/' ) ?></li>
+                     
                         <?php if(!Yii::$app->user->isGuest): ?>
                             <li><a href="<?= \yii\helpers\Url::to(['/site/logout'])?>"><?= Yii::$app->user->identity['username']?> (Выход)</a></li>
                         <?php endif;?>
@@ -125,7 +124,7 @@ InternalAsset::register($this);
                     <span id="allgadgets_uid5">ПРИНИМАЕМ К ОПЛАТЕ:</span>
                 </div>
                 <div id="allgadgets_image_bablo">
-                    <img src="../images/pay-types.png" id="image_bablo" alt="">
+                    <img src="/images/pay-types.png" id="image_bablo" alt="">
                 </div>
             </div>
         </div>
@@ -139,7 +138,7 @@ InternalAsset::register($this);
                     <span id="allgadgets_uid6">ПРИНИМАЕМ К ОПЛАТЕ:</span>
                 </div>
                 <div id="allgadgets_image_bablo_mobila">
-                    <img src="../images/pay-types-mob.png" id="image_bablo_mobila" alt="">
+                    <img src="/images/pay-types-mob.png" id="image_bablo_mobila" alt="">
                 </div>
             </div>
         </div>
